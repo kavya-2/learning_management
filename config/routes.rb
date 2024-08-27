@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     root to: "admin#index", as: :admin_root
   end
 
+  resources :checkouts, only: [:create]
+
   get "admin" => "admin#index"
   # Defines the root path route ("/")
   root "courses#index"
